@@ -104,7 +104,6 @@ function getFastestPromise(array) {
  */
 /* eslint-disable no-param-reassign */
 /* eslint no-return-assign: 2,
-         no-extra-parens: 1,
          brace-style: 2,
          semi: 2
 */
