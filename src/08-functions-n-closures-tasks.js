@@ -134,7 +134,7 @@ function retry(func, attempts) {
  *
  */
 function logger(func, logFunc) {
-  return function (...args) {
+  return (...args) => {
     const arr = args.map((item) => JSON.stringify(item)).join(',');
     logFunc(`${func.name}(${arr}) starts`);
     const result = func(...args);
@@ -180,7 +180,7 @@ function partialUsingArguments(fn, ...args1) {
 function getIdGeneratorFunction(startFrom) {
   const value = startFrom;
   let count = 0;
-  return function () {
+  return () => {
     const res = value + count;
     count += 1;
     return res;
